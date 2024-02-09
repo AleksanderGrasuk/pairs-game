@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+}
+
+.container {
+  width: 1200px;
+  padding: 40px 10px;
+  margin: 0 auto;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 80px;
+  height: 90px;
+  background-image: url('../img/skillbox.jpg');
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  font-size: 42px;
+  font-weight: bold;
+  border-radius: 12%;
+  cursor: pointer;
+  transition: background .2s, color .2s, transform .2s;
+}
+
+.card img {
+  visibility: hidden;
+}
+
+.card.open {
+  background: none;
+  background-color: rgb(206, 141, 85);
+  color: black;
+}
+
+.card.open img {
+  visibility: visible;
+}
+
+.card.success {
+  background: none;
+  background-color: rgb(54, 166, 57);
+  color: white;
+  transform: scale(0.97);
+}
+
+.card.success img {
+  visibility: visible;
+}
